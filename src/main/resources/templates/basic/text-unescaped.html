@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<! th:text는 데이터 안에 있는 코드를 해석을 한다.-->
+<! th:utext는 데이터 안에 있는 코드를 해석을 하지 않고 그대로 노출 시킨다.
+    기본적으로 escape를 사용 하는게 좋다.-->
+  <h1> text vs utext </h1>
+  <ul>
+    <li>th:text = <span th:text="${data}"></span></li>
+    <li>th:utext = <span th:utext="${data}"></span></li>
+  </ul>
+<h1><span th:inline="none">[[...]] vs [(...)]</span></h1>
+  <ul>
+    <li><span th:inline="none">[[...]] = </span>[[${data}]]</li>
+    <li><span th:inline="none">[(...)] = </span>[(${data})]</li>
+  </ul>
+</body>
+</html>
